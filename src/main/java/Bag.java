@@ -30,7 +30,7 @@ public abstract class Bag {
      * be empty (e.g. numberOfContents is 0 and an empty String array for
      * its contents.)
      */
-    void Bag(String color, int capacity) {
+    public Bag(String color, int capacity) {
         this.color = color;
         this.capacity = capacity;
         this.contents = new String[this.capacity];
@@ -109,8 +109,8 @@ public abstract class Bag {
         if (this.numberOfContents == 0) {
             return null;
         }
-        String lastItem = this.contents[numberOfContents];
-        this.contents[numberOfContents] = "";
+        String lastItem = this.contents[this.numberOfContents];
+        this.contents[this.numberOfContents] = " ";
         this.numberOfContents --;
         return lastItem;
     }
